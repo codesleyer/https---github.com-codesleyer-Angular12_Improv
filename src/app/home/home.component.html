@@ -1,9 +1,78 @@
-﻿<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 8!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+﻿  <h2>Home</h2>
+<table>
+    <tr>
+        <td style="width: 50%; border-style: solid;
+        border-width: 1px;
+        padding-top: 5px;
+        padding-bottom: 2px;">
+            <div style="border-bottom: 2px solid black; width: 100%;">
+            <span >Key Objective
+            </span>
+            </div>
+            <div>
+                Improv Rule Management allow us to create and manage rules that support business for various type of CenturyLink customer/user's profiles along with their services. 
+                Authorized user can be able to modify system configurations and take appropriate actions. This portal will also allow us to bring multiple report and review various statics.
+                </div>
+                <ul>
+                    <li>Dashboard: IRM provide us a way to present transaction statics i.e. Monthly registered customer, No of transactions, max/min demanding services.
+                    </li>
+                    <li>Improv Reports: Allow us to generate business specific reports.
+                    </li>
+                    <li>
+                        Rule Configure: System allow us to Create/update/Delete /View imporv core elements i.e. Platform, Service, Classes, Attributes, Groups and it map accordingly.
+                    </li>
+                </ul>
+        </td>
+        <td style="width: 50%; border-style: solid;
+        border-width: 1px;
+        padding-top: 5px;
+        padding-bottom: 2px;">
+        <div style="border-bottom: 2px solid black; width: 100%;">
+            <table style="width: 100%;">
+                <tr>
+           <td> <span>Today’s Update</span></td>
+             <td >   <a ><img src="/assets/image/status.png" style="height:25px "></a></td>
+             <td >   <a ><img src="/assets/image/status.png" style="height:25px "></a></td>
+                        </tr>
+        </table>
+        </div>
+        <div>
+            <span>Application Health Status: Active
+            </span>
+            <ul>
+            <li><span>Newly Created Accounts: 130 | Inactivated Accounts: 10</span></li>
+                <li><span>Invalid Request: 30 | Un Processed request: 10</span></li>
+                
+            </ul>
+            </div>
+            <div id="chartContainer" style="height: 120px; width: 100%;"></div>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light1", // "light2", "dark1", "dark2"
+        animationEnabled: false, // change to true		
+        title:{
+            text: "Basic Column Chart"
+        },
+        data: [
+        {
+            // Change type to "bar", "area", "spline", "pie",etc.
+            type: "column",
+            dataPoints: [
+                { label: "apple",  y: 10  },
+                { label: "orange", y: 15  },
+                { label: "banana", y: 25  },
+                { label: "mango",  y: 30  },
+                { label: "grape",  y: 28  }
+            ]
+        }
+        ]
+    });
+    chart.render();
+    
+    }
+    </script>

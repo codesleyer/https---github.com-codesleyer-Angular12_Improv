@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
         private authenticationService: AuthenticationService,
         private userService: UserService
     ) {
+        /* #vishesh */
+        console.log("calling from HOME.components.ts");
         this.currentUser = this.authenticationService.currentUserValue;
     }
 

@@ -1,39 +1,183 @@
 ﻿<h2>Register</h2>
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-            <div *ngIf="f.firstName.errors.required">First Name is required</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-            <div *ngIf="f.username.errors.required">Username is required</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">Password is required</div>
-            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">
-            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-            Register
-        </button>
-        <a routerLink="/login" class="btn btn-link">Cancel</a>
-    </div>
-</form>
+
+
+  <div style="height: 20px; border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  background-color: darkgray;
+  width: 100%;">
+      <span style="font-size:large;"></span>
+  </div>
+
+  <table style="border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  width: 100%;
+  width: 100%;">
+      <tr>
+          <td>
+                <ul>
+                    <li>Get User Account Status</li>
+                </ul>
+            </td>
+
+            <td>
+                <input type="text" placeholder="Enter value"/>
+            </td>
+          <td>
+              <button>Find</button>
+          </td>
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Get Registered Active Users
+                </li>
+            </ul>
+        </td>
+
+        <td >
+          <select id="city" name="city">
+              <option value="1">Platform</option>
+              <option value="2">Denever</option>
+              <option value="3">Marion</option>
+              
+            </select>
+      </td>
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Export Services Associated with platform / City
+                </li>
+            </ul>
+        </td>
+
+        <td >
+            <select id="city" name="city">
+                <option value="1">Omaha</option>
+                <option value="2">Denever</option>
+                <option value="3">Marion</option>
+                
+              </select>
+        </td>
+      <!-- <td>
+        <a><img src="/assets/image/status.png" style="height:40px "></a> 
+      </td> -->
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Get Disabled Accounts
+                </li>
+            </ul>
+        </td>
+
+        <!-- <td >
+            <a><img src="/assets/image/status.png" style="height:40px "></a> 
+        </td>
+      <td>
+        <a><img src="/assets/image/status.png" style="height:40px "></a> 
+      </td> -->
+      <td >
+        <select id="city" name="city">
+            <option value="1">Platform</option>
+            <option value="2">Denever</option>
+            <option value="3">Marion</option>
+            
+          </select>
+    </td>
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Total Active Accounts 
+
+                </li>
+            </ul>
+        </td>
+
+       <!--  <td >
+            <a><img src="/assets/image/status.png" style="height:40px "></a> 
+        </td> -->
+        <td >
+          <select id="city" name="city">
+              <option value="1">Platform</option>
+              <option value="2">Denever</option>
+              <option value="3">Marion</option>
+              
+            </select>
+      </td>
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Registered customers for Specific Service
+
+                </li>
+            </ul>
+        </td>
+
+        <td >
+            <select id="city" name="city">
+                <option value="1">Omaha</option>
+                <option value="2">Denever</option>
+                <option value="3">Marion</option>
+                
+              </select>
+        </td>
+      <!-- <td>
+        <a><img src="/assets/image/status.png" style="height:40px "></a> 
+      </td>
+      <td>
+        <a><img src="/assets/image/status.png" style="height:40px "></a> 
+      </td> -->
+      <td >
+        <select id="city" name="city">
+            <option value="1">Platform</option>
+            <option value="2">Denever</option>
+            <option value="3">Marion</option>
+            
+          </select>
+    </td>
+      </tr>
+
+      <tr>
+        <td>
+            <ul>
+                <li>Find Users Of Specific Service Parameter 
+                </li>
+            </ul>
+        </td>
+
+       <!--  <td >
+            <a><img src="/assets/image/status.png" style="height:40px "></a> 
+        </td>
+      <td>
+        <a><img src="/assets/image/status.png" style="height:40px "></a> 
+      </td> -->
+        <td >
+            <select id="city" name="city">
+                <option value="1">Platform</option>
+                <option value="2">Denever</option>
+                <option value="3">Marion</option>
+                
+              </select>
+        </td>
+        <td>
+            <input type="text" placeholder="Enter value"/>
+        </td>
+      <td>
+          <button>Find</button>
+      </td>
+      </tr>
+  </table>

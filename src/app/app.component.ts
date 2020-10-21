@@ -14,11 +14,18 @@ export class AppComponent {
         private router: Router,
         private authenticationService: AuthenticationService
     ) {
+        /* #vishesh */
+        console.log("calling from app.components.ts");
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
 
     logout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
+    }
+
+    // #vishesh
+    register() {
+        this.router.navigate(['/register']);
     }
 }

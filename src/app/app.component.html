@@ -1,8 +1,14 @@
 ﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+<nav id="appCompNav" class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        <table><tr>
+        <td><a class="nav-item nav-link" routerLink="/">Home</a></td>
+        <!-- #vishesh -->
+        <td><a class="nav-item nav-link" (click)="register()">Stats</a></td>
+        <td><a class="nav-item nav-link" (click)="register()">Reports</a></td>
+        <td><a class="nav-item nav-link" (click)="register()">Settings</a></td>
+        <td><a class="nav-item nav-link" (click)="logout()">Logout</a></td>
+    </tr></table>
     </div>
 </nav>
 
@@ -19,11 +25,11 @@
 </div>
 
 <!-- credits -->
-<div class="text-center">
+<div style="text-align: center;" class="text-center">
     <p>
-        <a href="https://jasonwatmore.com/post/2019/06/10/angular-8-user-registration-and-login-example-tutorial" target="_top">Angular 8 - User Registration and Login Example & Tutorial</a>
+        <a href="https://www.lumen.com/en-us/home.html" target="_blank">Property of Lumen</a>
     </p>
     <p>
-        <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+        <!-- <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a> -->
     </p>
 </div>
